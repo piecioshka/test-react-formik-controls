@@ -8,12 +8,11 @@ export const MyFormCheckbox = () => {
     <Formik
       initialValues={values}
       onSubmit={(newValues) => {
-        console.debug("piecioshka, onSubmit", { values, newValues });
+        // console.debug("piecioshka, onSubmit", { values, newValues });
         setValues(newValues);
       }}
     >
       {() => {
-        // console.debug("piecioshka, render");
         return (
           <Form>
             <h2>my form with checkboxes</h2>
@@ -21,14 +20,17 @@ export const MyFormCheckbox = () => {
               {({ field, form: { dirty }, meta }) => {
                 console.debug("piecioshka, checkbox", field, { dirty });
                 return (
-                  <input
-                    name="rules"
-                    type="checkbox"
-                    checked={field.value}
-                    onChange={(evt) => {
-                      field.onChange(evt);
-                    }}
-                  />
+                  <label>
+                    <input
+                      name="rules"
+                      type="checkbox"
+                      checked={field.value}
+                      onChange={(evt) => {
+                        field.onChange(evt);
+                      }}
+                    />
+                    accept rules
+                  </label>
                 );
               }}
             </Field>

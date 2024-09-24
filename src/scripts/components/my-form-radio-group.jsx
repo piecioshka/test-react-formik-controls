@@ -3,7 +3,7 @@ import { Formik, Form, Field } from "formik";
 import { Debug } from "./debug";
 
 export const MyFormRadioGroup = () => {
-  const [values, setValues] = useState({ agree: true });
+  const [values, setValues] = useState({ flag: true });
   return (
     <Formik
       initialValues={values}
@@ -16,11 +16,10 @@ export const MyFormRadioGroup = () => {
         return (
           <Form>
             <h2>my form with radio group</h2>
-            <Field name="agree">
+            <Field name="flag">
               {({ field, form: { dirty }, meta }) => {
                 console.debug("piecioshka, radio group", field, { dirty });
                 const handleChange = (evt) => {
-                  console.log(field.value);
                   field.onChange({
                     ...evt,
                     target: {
@@ -33,9 +32,9 @@ export const MyFormRadioGroup = () => {
                 return (
                   <ul>
                     <li>
-                      <label htmlFor="">
+                      <label>
                         <input
-                          name="agree"
+                          name="flag"
                           type="radio"
                           checked={field.value}
                           onChange={handleChange}
@@ -45,9 +44,9 @@ export const MyFormRadioGroup = () => {
                       </label>
                     </li>
                     <li>
-                      <label htmlFor="">
+                      <label>
                         <input
-                          name="agree"
+                          name="flag"
                           type="radio"
                           checked={field.value === false}
                           onChange={handleChange}
