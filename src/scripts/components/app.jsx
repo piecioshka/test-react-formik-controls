@@ -1,11 +1,13 @@
 import React from "react";
-import { MyForm } from "./my-form";
+import { MyFormCheckbox } from "./my-form-checkbox";
+import { MyFormRadioGroup } from "./my-form-radio-group";
 
 export const App = () => {
   return (
     <div>
       <h1>test-react-formik-controls</h1>
-      <MyForm />
+      <MyFormCheckbox />
+      <MyFormRadioGroup />
     </div>
   );
 };

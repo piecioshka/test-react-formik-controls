@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import { Formik, Form, Field } from "formik";
+import { Debug } from "./debug";
 
-export const MyForm = () => {
+export const MyFormCheckbox = () => {
   const [values, setValues] = useState({ rules: true });
   return (
     <Formik
@@ -12,13 +13,13 @@ export const MyForm = () => {
       }}
     >
       {() => {
-        console.debug("piecioshka, render");
+        // console.debug("piecioshka, render");
         return (
           <Form>
-            <h2>my form</h2>
+            <h2>my form with checkboxes</h2>
             <Field name="rules">
               {({ field, form: { dirty }, meta }) => {
-                console.debug("piecioshka, field", field, { dirty }, meta);
+                console.debug("piecioshka, checkbox", field, { dirty });
                 return (
                   <input
                     name="rules"
@@ -31,6 +32,7 @@ export const MyForm = () => {
                 );
               }}
             </Field>
+            <Debug />
           </Form>
         );
       }}
