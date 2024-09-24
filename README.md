@@ -1,10 +1,10 @@
-# test-react-formik-checkbox
+# test-react-formik-controls
 
 TODO
 
 ## Preview 🎉
 
-<https://piecioshka.github.io/test-react-formik-checkbox/>
+<https://piecioshka.github.io/test-react-formik-controls/>
 
 ## License
 

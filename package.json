@@ -1,6 +1,6 @@
 {
   "private": true,
-  "name": "test-react-formik-checkbox",
+  "name": "test-react-formik-controls",
   "description": "",
   "version": "0.0.0",
   "license": "MIT",
@@ -38,7 +38,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git@github.com:piecioshka/test-react-formik-checkbox.git"
+    "url": "git@github.com:piecioshka/test-react-formik-controls.git"
   },
   "engines": {
     "node": ">=16"
