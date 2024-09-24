@@ -19,6 +19,17 @@ export const MyFormRadioGroup = () => {
             <Field name="agree">
               {({ field, form: { dirty }, meta }) => {
                 console.debug("piecioshka, radio group", field, { dirty });
+                const handleChange = (evt) => {
+                  console.log(field.value);
+                  field.onChange({
+                    ...evt,
+                    target: {
+                      ...evt.target,
+                      name: field.name,
+                      value: evt.target.value === "1" ? true : false,
+                    },
+                  });
+                };
                 return (
                   <ul>
                     <li>
@@ -27,16 +38,7 @@ export const MyFormRadioGroup = () => {
                           name="agree"
                           type="radio"
                           checked={field.value}
-                          onChange={(evt) => {
-                            field.onChange({
-                              ...evt,
-                              target: {
-                                ...evt.target,
-                                name: field.name,
-                                value: true,
-                              },
-                            });
-                          }}
+                          onChange={handleChange}
                           value="1"
                         />{" "}
                         yes
@@ -48,16 +50,7 @@ export const MyFormRadioGroup = () => {
                           name="agree"
                           type="radio"
                           checked={field.value === false}
-                          onChange={(evt) => {
-                            field.onChange({
-                              ...evt,
-                              target: {
-                                ...evt.target,
-                                name: field.name,
-                                value: false,
-                              },
-                            });
-                          }}
+                          onChange={handleChange}
                           value="0"
                         />{" "}
                         no
