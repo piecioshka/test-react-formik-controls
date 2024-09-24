@@ -42,5 +42,8 @@
   },
   "engines": {
     "node": ">=16"
+  },
+  "dependencies": {
+    "formik": "^2.4.6"
   }
 }
