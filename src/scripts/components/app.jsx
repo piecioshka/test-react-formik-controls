@@ -5,7 +5,7 @@ import { MyFormRadioGroup } from "./my-form-radio-group";
 export const App = () => {
   return (
     <div>
-      <h1>test-react-formik-controls</h1>
+      <h1>React Formik Controls</h1>
       <MyFormCheckbox />
       <MyFormRadioGroup />
     </div>

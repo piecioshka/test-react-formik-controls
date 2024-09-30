@@ -1,6 +1,6 @@
 # test-react-formik-controls
 
-TODO
+📒 Test app for debugging React Formik form controls
 
 ## Preview 🎉
 
